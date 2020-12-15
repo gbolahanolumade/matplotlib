@@ -90,3 +90,43 @@ plt.plot(events,readings)
 ax.xaxis.set_major_locator(months)
 ax.xaxis.set_major_formatter(timeFmt)
 ax.xaxis.set_minor_locator(days)
+
+pop = np.random.randint(0,100,100)
+n,bins,patches = plt.hist(pop,bins=20)
+
+
+index = np.arange(5)
+values = [5,7,3,4,6]
+
+plt.bar(index,values)
+plt.xticks(index+0.4,['A','B','C','D','E'])
+
+index = np.arange(5)
+values1 = [5,7,3,4,6]
+std1 = [0.8,1,0.4,0.9,1.3]
+plt.title('A Bar Chart')
+plt.bar(index,values1,yerr=std1,error_kw={'ecolor':'0.1',
+'capsize':6},alpha=0.7,label='First')
+plt.xticks(index+0.4,['A','B','C','D','E'])
+plt.legend(loc=2)
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+index = np.arange(5)
+values1 = [5,7,3,4,6]
+values2 = [6,6,4,5,7]
+values3 = [5,6,5,4,6]
+bw = 0.3
+plt.axis([0,8,0,5])
+plt.title('A Multiseries Horizontal Bar Chart',fontsize=20)
+plt.barh(index,values1,bw,color='b')
+plt.barh(index+bw,values2,bw,color='g')
+plt.barh(index+2*bw,values3,bw,color='r')
+plt.yticks(index+0.4,['A','B','C','D','E'])
+
+
+
+
+
+
