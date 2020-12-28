@@ -125,8 +125,54 @@ plt.barh(index+bw,values2,bw,color='g')
 plt.barh(index+2*bw,values3,bw,color='r')
 plt.yticks(index+0.4,['A','B','C','D','E'])
 
+import matplotlib.pyplot as plt
+import pandas as pd
+data = {'series1':[1,3,4,3,5],
+'series2':[2,4,5,2,4],
+'series3':[3,2,3,1,3]}
+df = pd.DataFrame(data)
+df.plot(kind='bar', stacked=True)
+
+import matplotlib.pyplot as plt
+labels = ['Nokia','Samsung','Apple','Lumia']
+values = [10,30,45,15]
+colors = ['yellow','green','red','blue']
+plt.pie(values,labels=labels,colors=colors)
+plt.axis('equal')
 
 
+import matplotlib.pyplot as plt
+labels = ['Nokia','Samsung','Apple','Lumia']
+values = [10,30,45,15]
+colors = ['yellow','green','red','blue']
+explode = [0.3,0.2,0,0]
+plt.title('A Pie Chart')
+plt.pie(values,labels=labels,colors=colors,explode=explode,startangle=180)
+plt.axis('equal')
+
+import matplotlib.pyplot as plt
+import numpy as np
+dx = 0.01; dy = 0.01
+x = np.arange(-2.0,2.0,dx)
+y = np.arange(-2.0,2.0,dy)
+X,Y = np.meshgrid(x,y)
+def f(x,y):
+ return (1 - y**5 + x**5)*np.exp(-x**2-y**2)
+C = plt.contour(X,Y,f(X,Y),8,colors='black')
+plt.contourf(X,Y,f(X,Y),8)
+plt.clabel(C, inline=1, fontsize=10)
+    
+x = np.arange(5)
+y = (20,35,30,37,40)
+
+plt.bar(x,y)
+plt.show()
+plt.scatter(x,y)
 
 
+x = np.linspace(0,20,1000)
+y = np.sin(x)
 
+plt.plot(x,y)
+plt.title('Sample Plot Title')
+plt.grid(True)
