@@ -203,3 +203,14 @@ type(fig), type(ax)
 fig, ax= plt.subplots(figsize=(10,10))
 ax.plot(x,y)
 ax.set(title='Simple Plot', xlabel='X-axis', ylabel='y-axis')
+
+
+x = np.linspace(0, 10, 100)
+
+
+fig, ax=plt.subplots()
+ax.plot(x, x**2)
+
+
+fig, ax=plt.subplots()
+ax.scatter(x, np.exp(x));
