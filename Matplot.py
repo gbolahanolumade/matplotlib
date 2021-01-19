@@ -176,3 +176,30 @@ y = np.sin(x)
 plt.plot(x,y)
 plt.title('Sample Plot Title')
 plt.grid(True)
+
+
+
+plt.plot([1,2,3,4,]);
+
+
+fig = plt.figure()
+ax = fig.add_subplot()
+plt.show() 
+
+x= [1,2,3,4]
+y= [1,2,3,4]
+
+fig = plt.figure()
+ax = fig.add_axes([1,1,1,1])
+ax.plot(x,y)
+plt.show(),
+
+
+fig, ax = plt.subplots()
+ax.plot(x,y);
+type(fig), type(ax)
+
+
+fig, ax= plt.subplots(figsize=(10,10))
+ax.plot(x,y)
+ax.set(title='Simple Plot', xlabel='X-axis', ylabel='y-axis')
